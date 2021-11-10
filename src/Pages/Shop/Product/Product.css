@@ -1,7 +1,7 @@
 .product .card {
     width: 500px;
     border: none;
-    height: 350px;
+    height: 450px;
     border-radius: 3px;
     cursor: pointer;
     position: relative;
@@ -43,8 +43,8 @@
 
 .p-about {
     position: absolute;
-    width: 150px;
-    font-size: 10px;
+    width: 200px;
+    font-size: 14px;
     top: 140px;
     left: -125px;
     opacity: 0
@@ -112,7 +112,7 @@
     }
 
     100% {
-        width: 150px;
+        width: 100px;
         top: 100px;
         transform: translateY(100px);
         transform: translateX(90px)
@@ -123,10 +123,7 @@
     position: absolute;
     bottom: -150px
 }
-.product .card:hover .rating{
-    position: absolute;
-    top: 50px;
-}
+
 .product .card:hover .buttons {
     animation: buttons 500ms ease-in forwards
 }
@@ -146,4 +143,15 @@
     font-size: 16px;
     width: 110px !important;
     font-weight: 600
+}
+@media only screen and (max-width:768px){
+    /* .product .card:hover .p-image img {
+        display: none;
+    } */
+
+    .p-about {
+        width: 150px;
+        font-size: 12px;
+        
+    }
 }
