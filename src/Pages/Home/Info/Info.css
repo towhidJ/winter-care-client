@@ -1,0 +1,23 @@
+.header{
+    font-size:36px;
+}
+
+
+.info-text{
+    font-size:4rem;
+    color:yellow;
+    font-weight: 900;
+}
+.bannerBk h5{
+    color:white;
+    font-weight:700;
+}
+.bannerBk{
+
+    background : rgba(0,10,15,0.9) ;
+    background-blend-mode: darken;
+    /* background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center; */
+    
+}
