@@ -14,6 +14,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import PrivateRoute from "../../Login/PrivateRoute/PrivateRoute";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import Orders from "../Orders/Orders/Orders";
+import Payment from "../Payment/Payment";
 import AddProduct from "../Products/AddProduct/AddProduct";
 import ManageProducts from "../Products/ManageProducts/ManageProducts";
 import useAuth from "./../../../hooks/useAuth";
@@ -22,14 +23,13 @@ import DashboardHome from "./../DashboardHome/DashboardHome";
 import ManageAllOrder from "./../Orders/ManageAllOrder/ManageAllOrder";
 import Review from "./../Review/Review";
 import "./Dashboard.css";
-import Payment from "./Payment/Payment";
 const drawerWidth = 200;
 
 function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logout } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -81,6 +81,11 @@ function Dashboard(props) {
                     </Link>
                 </Box>
             )}
+            <div className="px-2 my-5">
+                <Button onClick={logout} variant="contained">
+                    Logout
+                </Button>
+            </div>
         </div>
     );
 

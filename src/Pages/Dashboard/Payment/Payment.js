@@ -16,7 +16,7 @@ const Payment = () => {
             }}
         >
             <Paper elevation={3} className="text-center align-content-center">
-                <h1>Comming Soon......</h1>
+                <h1>Payment System Coming Soon......</h1>
             </Paper>
         </Box>
     );
