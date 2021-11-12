@@ -6,17 +6,17 @@ Live Website Link [https://winter-care.web.app/](https://winter-care.web.app/).
 
 -Any Member Register and View available Product
 
--   only register member can Purchase Product
--   There 3 Role available
-    -Vistor
-    -user
-    -admin
-    -vistor can view, search and compare available Product
-    -user can view and Purchase Product
-    -Admin has some extra privilege including all privilege visitor and admin:
-    -Admin can add product and manage product
-    -Admin can manage Order
-    -Admin can ship Order to user based on order placed by sending user confirmation
+- only register member can Purchase Product
+- There 3 Role available 
+- - Vistor 
+- - user
+- - admin
+- vistor can view, search and compare available Product 
+- user can view and Purchase Product 
+- Admin has some extra privilege including all privilege visitor and admin:
+- - Admin can add product and manage product 
+- - Admin can manage Order 
+- - Admin can ship Order to user based on order placed by sending user confirmation
 
 ## Project Works
 
