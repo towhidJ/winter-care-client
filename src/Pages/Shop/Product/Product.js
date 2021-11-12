@@ -47,6 +47,9 @@ const Product = (props) => {
                     <h4 className="card-title">
                         <p>{productName}</p>
                     </h4>
+                    <hp className="card-title">
+                        <p>{subtitle}</p>
+                    </hp>
                     <h5 className="card-title">
                         <p>{description.slice(0, 150)}</p>
                     </h5>

@@ -76,9 +76,9 @@ const Banner = () => {
                             <p>100% Natural Product</p>
                             <h5>Face Care</h5>
 
-                            <button className="btn btn-warning">
+                            <Link to="/shop" className="btn btn-warning">
                                 Shop Now
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

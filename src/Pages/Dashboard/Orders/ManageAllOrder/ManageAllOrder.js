@@ -74,6 +74,7 @@ const ManageAllOrder = () => {
                             <th scope="col">Email</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Quentity</th>
+                            <th scope="col">Or. Date</th>
                             <th scope="col">Price</th>
                             <th scope="col">Status</th>
                             <th scope="col">Actions</th>
@@ -92,6 +93,7 @@ const ManageAllOrder = () => {
                                     <td>{order.email}</td>
                                     <td>{order.productName}</td>
                                     <td>{order.qty}</td>
+                                    <td>{order.date}</td>
                                     <td>{order.price}</td>
                                     <td
                                         className={

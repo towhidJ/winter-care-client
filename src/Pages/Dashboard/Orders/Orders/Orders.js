@@ -60,6 +60,7 @@ const Orders = () => {
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Product Name</th>
+                            <th scope="col">Or. Date</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Status</th>
@@ -78,6 +79,7 @@ const Orders = () => {
                                     <td>{order.customerName}</td>
                                     <td>{order.email}</td>
                                     <td>{order.productName}</td>
+                                    <td>{order.date}</td>
                                     <td>{order.price}</td>
                                     <td>{order.qty}</td>
                                     <td

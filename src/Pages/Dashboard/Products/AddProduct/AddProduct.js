@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = async (data) => {
-        await fetch(`http://localhost:5000/product`, {
+        await fetch(`https://radiant-castle-55741.herokuapp.com/product`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
