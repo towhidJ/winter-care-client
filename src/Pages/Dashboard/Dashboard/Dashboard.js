@@ -22,6 +22,7 @@ import DashboardHome from "./../DashboardHome/DashboardHome";
 import ManageAllOrder from "./../Orders/ManageAllOrder/ManageAllOrder";
 import Review from "./../Review/Review";
 import "./Dashboard.css";
+import Payment from "./Payment/Payment";
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -54,6 +55,11 @@ function Dashboard(props) {
                     <Link to={`${url}/review`} id="link">
                         <Button color="inherit">User Review</Button>
                     </Link>
+                    <div>
+                        <Link to={`${url}/payment`} id="link">
+                            <Button color="inherit">Payment</Button>
+                        </Link>
+                    </div>
                 </>
             )}
             <br />
@@ -171,6 +177,9 @@ function Dashboard(props) {
                     </AdminRoute>
                     <PrivateRoute path={`${path}/orders`}>
                         <Orders></Orders>
+                    </PrivateRoute>
+                    <PrivateRoute path={`${path}/payment`}>
+                        <Payment></Payment>
                     </PrivateRoute>
                     <PrivateRoute path={`${path}/review`}>
                         <Review></Review>

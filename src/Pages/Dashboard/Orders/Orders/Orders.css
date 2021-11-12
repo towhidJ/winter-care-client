@@ -3,17 +3,17 @@
     color:darkorange;
  
 }
-.ongoing{
-    color:greenyellow;
+.ongoing,.shipped{
+    color:slateblue;
 
 }
-.approved{
+.complete{
     /* background-color:green !important; */
         color:green ;
         
 }
 
-.pending,.processing,.ongoing,.approved{
+.pending,.processing,.ongoing,.shipped,.complete{
     border:0;
     padding-right:0;
     padding-left:0;

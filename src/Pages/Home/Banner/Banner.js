@@ -1,10 +1,12 @@
 import React from "react";
-import banner2 from "../../../images/banner-2.jpg";
-import banner1 from "../../../images/banner-3.jpg";
+import { Link } from "react-router-dom";
+import banner1 from "../../../images/banner-1.jpg";
+import banner3 from "../../../images/Slider-1.png";
+import banner2 from "../../../images/Slider-2.png";
 import "./Banner.css";
 const Banner = () => {
     return (
-        <section className=" mt-5 bannerHome">
+        <section className=" mt-5 pt-3 bannerHome">
             <div
                 id="carouselExampleCaptions"
                 className="carousel slide"
@@ -35,6 +37,21 @@ const Banner = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img
+                            src={banner3}
+                            className="d-block w-100"
+                            alt="..."
+                        />
+                        <div className="carousel-caption d-md-block">
+                            <p>100% Healthy & Affordable</p>
+                            <h5>Skin Care</h5>
+
+                            <Link to="/shop" className="btn btn-warning">
+                                Shop Now
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="carousel-item ">
+                        <img
                             src={banner1}
                             className="d-block w-100"
                             alt="..."
@@ -43,20 +60,21 @@ const Banner = () => {
                             <p>100% Healthy & Affordable</p>
                             <h5>Organic Creme</h5>
 
-                            <button className="btn btn-warning">
+                            <Link to="/shop" className="btn btn-warning">
                                 Shop Now
-                            </button>
+                            </Link>
                         </div>
                     </div>
+
                     <div className="carousel-item">
                         <img
                             src={banner2}
                             className="d-block w-100"
                             alt="..."
                         />
-                        <div className="carousel-caption  d-md-block">
+                        <div className="carousel-s  d-md-block">
                             <p>100% Natural Product</p>
-                            <h5>Quality of life</h5>
+                            <h5>Face Care</h5>
 
                             <button className="btn btn-warning">
                                 Shop Now

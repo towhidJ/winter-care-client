@@ -58,6 +58,7 @@ const Orders = () => {
                             <th scope="col">Email</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -75,6 +76,7 @@ const Orders = () => {
                                     <td>{order.email}</td>
                                     <td>{order.productName}</td>
                                     <td>{order.price}</td>
+                                    <td>{order.qty}</td>
                                     <td
                                         className={
                                             order.status === "Pending"
@@ -83,7 +85,9 @@ const Orders = () => {
                                                 ? "ongoing"
                                                 : order.status === "Processing"
                                                 ? "processing"
-                                                : "approved"
+                                                : order.status === "Shipped"
+                                                ? "shipped"
+                                                : "complete"
                                         }
                                     >
                                         {order.status}

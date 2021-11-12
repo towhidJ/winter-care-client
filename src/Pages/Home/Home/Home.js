@@ -1,17 +1,23 @@
 import React from "react";
-import Product from "../../Shop/Product/Product";
-import Banner from "../Banner/Banner";
+import { Spinner } from "react-bootstrap";
 import Blog from "../Blog/Blog";
 import CustomerReviews from "../CustomerReviews/CustomerReviews";
 import ProductAd from "../ProductAd/ProductAd";
+import useProducts from "./../../../hooks/useProducts";
 import Footer from "./../../Shared/Footer/Footer";
 import Navigation from "./../../Shared/Navigation/Navigation";
+import Product from "./../../Shop/Product/Product";
 import Info from "./../Info/Info";
 import "./Home.css";
+import Banner from './../Banner/Banner';
 const Home = () => {
+    const { products, loading } = useProducts();
+    const size = 6;
+    const items = products.slice(0, size);
     return (
         <div>
             <Navigation></Navigation>
+
             <Banner />
             <ProductAd />
             <div className="text-center">
@@ -21,10 +27,15 @@ const Home = () => {
                 </h1>
             </div>
             <div className="row row-cols-1 row-cols-lg-3 g-3 my-3 mx-auto container">
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+                {loading ? (
+                    <div className=" d-flex justify-content-center align-items-center">
+                        <Spinner animation="border" />
+                    </div>
+                ) : (
+                    items.map((product) => (
+                        <Product key={product._id} product={product}></Product>
+                    ))
+                )}
             </div>
             <Info />
             <CustomerReviews />

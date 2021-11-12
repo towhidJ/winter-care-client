@@ -70,6 +70,7 @@ const ManageAllOrder = () => {
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Product Name</th>
+                            <th scope="col">Quentity</th>
                             <th scope="col">Price</th>
                             <th scope="col">Status</th>
                             <th scope="col">Actions</th>
@@ -86,7 +87,8 @@ const ManageAllOrder = () => {
                                     <th scope="row">{order._id}</th>
                                     <td>{order.customerName}</td>
                                     <td>{order.email}</td>
-                                    <td>{order.ProductName}</td>
+                                    <td>{order.productName}</td>
+                                    <td>{order.qty}</td>
                                     <td>{order.price}</td>
                                     <td
                                         className={
@@ -96,10 +98,12 @@ const ManageAllOrder = () => {
                                                 ? "ongoing"
                                                 : order.status === "Processing"
                                                 ? "processing"
-                                                : "approved"
+                                                : order.status === "Shipped"
+                                                ? "shipped"
+                                                : "complete"
                                         }
                                     >
-                                        {order.status !== "Approved" ? (
+                                        {order.status !== "Complete" ? (
                                             <select
                                                 className={
                                                     order.status === "Pending"
@@ -110,7 +114,10 @@ const ManageAllOrder = () => {
                                                         : order.status ===
                                                           "Processing"
                                                         ? "processing"
-                                                        : "approved"
+                                                        : order.status ===
+                                                          "Shipped"
+                                                        ? "shipped"
+                                                        : "complete"
                                                 }
                                                 onChange={(e) =>
                                                     changHandler(
@@ -138,10 +145,16 @@ const ManageAllOrder = () => {
                                                     On Going
                                                 </option>
                                                 <option
-                                                    className="approved"
-                                                    value="Approved"
+                                                    className="shipped"
+                                                    value="Shipped"
                                                 >
-                                                    Approved
+                                                    Shipped
+                                                </option>
+                                                <option
+                                                    className="complete"
+                                                    value="Complete"
+                                                >
+                                                    Complete
                                                 </option>
                                             </select>
                                         ) : (

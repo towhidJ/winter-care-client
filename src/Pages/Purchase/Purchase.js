@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -8,6 +8,7 @@ const Purchase = () => {
     const history = useHistory();
     const { id } = useParams();
     const { user } = useAuth();
+    const [qty, setQty] = useState(1);
 
     const { price, img, productName, description, category } = location.state;
 
@@ -19,13 +20,12 @@ const Purchase = () => {
     } = useForm();
 
     const onSubmit = (data) => {
+        console.log(qty);
         data.status = "Pending";
         data.price = price;
         data.productId = id;
         data.productName = productName;
-        data.description = description;
-
-        console.log(data);
+        data.qty = 1;
         fetch("http://localhost:5000/orders", {
             method: "POST",
             headers: {
@@ -41,6 +41,7 @@ const Purchase = () => {
                     history.push("/shop");
                 }
             });
+        console.log(data);
     };
     return (
         <div className="container mt-5 pt-5 overflow-hidden">
@@ -69,6 +70,12 @@ const Purchase = () => {
                         </li>
                         <li className="list-group-item d-flex justify-content-between lh-sm">
                             <span className="text-muted">{description}</span>
+                        </li>
+                        <li className="list-group-item d-flex justify-content-between align-items-center lh-sm">
+                            <div>
+                                <h6 className="my-0">Quentity</h6>
+                            </div>
+                            <span className="">1</span>
                         </li>
 
                         <li className="list-group-item d-flex justify-content-between">
@@ -108,6 +115,18 @@ const Purchase = () => {
                                     defaultValue={user.email}
                                     readOnly
                                     {...register("email")}
+                                />
+                            </div>
+
+                            <div className="col-12">
+                                <label htmlFor="email" className="form-label">
+                                    Phone Number{" "}
+                                </label>
+                                <input
+                                    className="form-control"
+                                    defaultValue=""
+                                    placeholder="+88018XXXXXXXX"
+                                    {...register("phoneNumber")}
                                 />
                             </div>
 
