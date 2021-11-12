@@ -1,0 +1,22 @@
+.pending,.processing{
+    /* background-color:orange !important; */
+    color:darkorange;
+ 
+}
+.ongoing{
+    color:greenyellow;
+
+}
+.approved{
+    /* background-color:green !important; */
+        color:green ;
+        
+}
+
+.pending,.processing,.ongoing,.approved{
+    border:0;
+    padding-right:0;
+    padding-left:0;
+    font-weight:700;
+    text-align: center;
+}
