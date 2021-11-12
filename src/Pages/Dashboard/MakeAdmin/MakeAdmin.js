@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = (e) => {
         const adminMail = user.email;
         const userData = { email, adminMail };
-        fetch("http://localhost:5000/users/admin", {
+        fetch("https://radiant-castle-55741.herokuapp.com/users/admin", {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -25,7 +25,6 @@ const MakeAdmin = () => {
                 if (data.modifiedCount) {
                     console.log(data);
                     setSuccess(true);
-                    
                 }
             });
 

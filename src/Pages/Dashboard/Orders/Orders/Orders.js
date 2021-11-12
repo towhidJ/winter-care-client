@@ -14,7 +14,7 @@ const Orders = () => {
     };
     useEffect(() => {
         setLoadOrder(true);
-        fetch("http://localhost:5000/orders/byEmail", {
+        fetch("https://radiant-castle-55741.herokuapp.com/orders/byEmail", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -33,10 +33,13 @@ const Orders = () => {
         if (window.confirm("Are you sure you want to cancel this order?")) {
             // eslint-disable-next-line no-lone-blocks
             {
-                fetch(`http://localhost:5000/orders/${id}`, {
-                    method: "Delete",
-                    headers: { "Content-Type": "application/json" },
-                })
+                fetch(
+                    `https://radiant-castle-55741.herokuapp.com/orders/${id}`,
+                    {
+                        method: "Delete",
+                        headers: { "Content-Type": "application/json" },
+                    }
+                )
                     .then((res) => res.json())
                     .then((data) => {
                         setSt(1);

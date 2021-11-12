@@ -1,5 +1,6 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Blog from "../Blog/Blog";
 import CustomerReviews from "../CustomerReviews/CustomerReviews";
 import ProductAd from "../ProductAd/ProductAd";
@@ -7,9 +8,9 @@ import useProducts from "./../../../hooks/useProducts";
 import Footer from "./../../Shared/Footer/Footer";
 import Navigation from "./../../Shared/Navigation/Navigation";
 import Product from "./../../Shop/Product/Product";
+import Banner from "./../Banner/Banner";
 import Info from "./../Info/Info";
 import "./Home.css";
-import Banner from './../Banner/Banner';
 const Home = () => {
     const { products, loading } = useProducts();
     const size = 6;
@@ -36,6 +37,11 @@ const Home = () => {
                         <Product key={product._id} product={product}></Product>
                     ))
                 )}
+            </div>
+            <div className="text-center d-flex justify-content-center my-5 py-2">
+                <Link to="/shop" className="btn btn-danger w-50">
+                    Explore more
+                </Link>
             </div>
             <Info />
             <CustomerReviews />

@@ -26,7 +26,7 @@ const Purchase = () => {
         data.productId = id;
         data.productName = productName;
         data.qty = 1;
-        fetch("http://localhost:5000/orders", {
+        fetch("https://radiant-castle-55741.herokuapp.com/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -48,7 +48,7 @@ const Purchase = () => {
             <div className="row g-5">
                 <div className="col-md-5 col-lg-4 order-md-last">
                     <ul className="list-group mb-3">
-                        <li className="list-group-item d-flex justify-content-between">
+                        <li className="list-group-item d-flex justify-content-center">
                             <img src={img} className="img-fluid" alt="" />
                         </li>
                         <li className="list-group-item  lh-sm">
@@ -69,11 +69,13 @@ const Purchase = () => {
                             <span className="text-muted">{category}</span>
                         </li>
                         <li className="list-group-item d-flex justify-content-between lh-sm">
-                            <span className="text-muted">{description}</span>
+                            <span className="text-muted">
+                                {description.slice(0, 150)}
+                            </span>
                         </li>
                         <li className="list-group-item d-flex justify-content-between align-items-center lh-sm">
                             <div>
-                                <h6 className="my-0">Quentity</h6>
+                                <h6 className="my-0">Quantity</h6>
                             </div>
                             <span className="">1</span>
                         </li>

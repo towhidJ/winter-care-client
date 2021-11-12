@@ -62,6 +62,7 @@ const Product = (props) => {
                                     description,
                                     category,
                                     productName,
+                                    subtitle,
                                 },
                             }}
                             className="btn btn-danger bold-btn"

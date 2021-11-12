@@ -11,7 +11,7 @@ const ManageAllOrder = () => {
     const [st, setSt] = useState(0);
     useEffect(() => {
         setLoadOrder(true);
-        fetch("http://localhost:5000/orders/")
+        fetch("https://radiant-castle-55741.herokuapp.com/orders/")
             .then((res) => res.json())
             .then((data) => {
                 setOrders(data);
@@ -22,7 +22,7 @@ const ManageAllOrder = () => {
 
     const changHandler = (data, id) => {
         console.log(data);
-        fetch(`http://localhost:5000/status/${id}`, {
+        fetch(`https://radiant-castle-55741.herokuapp.com/status/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ status: data }),
@@ -37,10 +37,13 @@ const ManageAllOrder = () => {
     const deleteHandler = (id) => {
         if (window.confirm("Are you sure you want to delete this order?")) {
             {
-                fetch(`http://localhost:5000/orders/${id}`, {
-                    method: "Delete",
-                    headers: { "Content-Type": "application/json" },
-                })
+                fetch(
+                    `https://radiant-castle-55741.herokuapp.com/orders/${id}`,
+                    {
+                        method: "Delete",
+                        headers: { "Content-Type": "application/json" },
+                    }
+                )
                     .then((res) => res.json())
                     .then((data) => {
                         setSt(1);

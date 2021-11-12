@@ -6,7 +6,8 @@ const SingleProduct = () => {
     const history = useHistory();
     const { id } = useParams();
 
-    const { price, img, productName, description, category } = location.state;
+    const { price, img, productName, description, category, subtitle } =
+        location.state;
     return (
         <>
             <Navigation />
@@ -32,6 +33,9 @@ const SingleProduct = () => {
                                 <h4 className="card-title">
                                     <strong>{productName}</strong>
                                 </h4>
+                                <h6 className="card-title">
+                                    <strong>{subtitle}</strong>
+                                </h6>
 
                                 <Link
                                     to={{
