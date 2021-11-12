@@ -46,6 +46,12 @@ const Home = () => {
             <Info />
             <CustomerReviews />
             <div className="my-3 px-2">
+                <div className="text-center">
+                    <h1 className="search-text">
+                        Our
+                        <span className="search-heading-text"> Blog</span>
+                    </h1>
+                </div>
                 <Blog />
             </div>
             <Footer></Footer>

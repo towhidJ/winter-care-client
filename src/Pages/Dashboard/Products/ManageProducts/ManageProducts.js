@@ -11,7 +11,7 @@ const ManageProducts = () => {
 
     useEffect(() => {
         setLoadProducts(true);
-        fetch("http://localhost:5000/products")
+        fetch("https://radiant-castle-55741.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data.products);
@@ -23,10 +23,13 @@ const ManageProducts = () => {
     const deleteHandler = (id) => {
         if (window.confirm("Are you sure you want to delete this order?")) {
             {
-                fetch(`http://localhost:5000/products/${id}`, {
-                    method: "Delete",
-                    headers: { "Content-Type": "application/json" },
-                })
+                fetch(
+                    `https://radiant-castle-55741.herokuapp.com/products/${id}`,
+                    {
+                        method: "Delete",
+                        headers: { "Content-Type": "application/json" },
+                    }
+                )
                     .then((res) => res.json())
                     .then((data) => {
                         setSt(1);

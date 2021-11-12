@@ -11,14 +11,22 @@ const ProductAd = () => {
                 </div>
                 <div className="col-12 col-lg-8 ">
                     <div className="ms-lg-5 ps-lg-5">
-                        <h1>Jahir Store</h1>
+                        <h1 className="search-text">Jahir Store</h1>
                         <p>
                             Factory is made up of two certified organic
                             properties.
                         </p>
                         <div className="">
-                            <h5>Sheva Poliva Ankana</h5>
-                            <p>Manager Winter care Shop</p>
+                            <h5 style={{ color: "darkgoldenrod" }}>
+                                ---- Sheva Poliva Ankana
+                            </h5>
+                            <p
+                                style={{ color: "darkgreen" }}
+                                className="fw-bold"
+                            >
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manager
+                                Winter care Shop
+                            </p>
                         </div>
                     </div>
                 </div>

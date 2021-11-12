@@ -1,5 +1,6 @@
-import { Alert, Button, TextField } from "@mui/material";
+import { Alert } from "@mui/material";
 import React, { useState } from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 
 const MakeAdmin = () => {
@@ -31,23 +32,35 @@ const MakeAdmin = () => {
         e.preventDefault();
     };
     return (
-        <div>
-            <h2>Make an Admin</h2>
-            <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    sx={{ width: "50%" }}
-                    label="Email"
-                    type="email"
-                    onBlur={handleOnBlur}
-                    variant="standard"
-                />
-                <Button type="submit" variant="contained">
-                    Make Admin
-                </Button>
-            </form>
-            {success && (
-                <Alert severity="success">Made Admin successfully!</Alert>
-            )}
+        <div
+            className="container px-5 my-2 border-2 shadow-lg p-5  w-full "
+            style={{ backgroundColor: "azure" }}
+        >
+            <h2 className="text-center">Make an Admin</h2>
+            <Form onSubmit={handleAdminSubmit}>
+                <Row className="mb-3 w-100">
+                    <Form.Group as={Col} controlId="formGridEmail">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
+                            className="text-center"
+                            type="email"
+                            placeholder="Enter Email"
+                            onBlur={handleOnBlur}
+                        />
+                    </Form.Group>
+                </Row>
+                <div className="d-flex justify-content-center align-items-center">
+                    <Button variant="primary" type="submit" className="w-50 ">
+                        Make Admin
+                    </Button>
+                </div>
+            </Form>
+            <br />
+            <div className="text-center d-flex justify-content-center">
+                {success && (
+                    <Alert severity="success">Made Admin successfully!</Alert>
+                )}
+            </div>
         </div>
     );
 };

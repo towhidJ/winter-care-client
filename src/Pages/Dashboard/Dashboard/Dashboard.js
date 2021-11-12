@@ -36,7 +36,11 @@ function Dashboard(props) {
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Toolbar style={{ backgroundColor: "aliceblue" }}>
+                <span className="fw-bolder" style={{ fontSize: "24px" }}>
+                    Winter CS
+                </span>
+            </Toolbar>
             <Divider />
             <Link to="/" id="link">
                 <Button color="inherit">Home</Button>
@@ -101,6 +105,7 @@ function Dashboard(props) {
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
                 }}
+                style={{ backgroundColor: "darkmagenta" }}
             >
                 <Toolbar>
                     <IconButton
@@ -113,7 +118,7 @@ function Dashboard(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Dashboard
+                        Winter Care Cream Shop Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
