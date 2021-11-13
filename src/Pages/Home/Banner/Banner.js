@@ -45,8 +45,11 @@ const Banner = () => {
                             <p>100% Healthy & Affordable</p>
                             <h5>Skin Care</h5>
 
-                            <Link to="/shop" className="btn btn-warning">
-                                Shop Now
+                            <Link
+                                to="/shop"
+                                className="btn btn-success px-lg-5"
+                            >
+                                Explore
                             </Link>
                         </div>
                     </div>
@@ -60,8 +63,8 @@ const Banner = () => {
                             <p>100% Healthy & Affordable</p>
                             <h5>Organic Creme</h5>
 
-                            <Link to="/shop" className="btn btn-warning">
-                                Shop Now
+                            <Link to="/shop" className="btn btn-danger px-lg-5">
+                                Explore
                             </Link>
                         </div>
                     </div>
@@ -76,8 +79,8 @@ const Banner = () => {
                             <p>100% Natural Product</p>
                             <h5>Face Care</h5>
 
-                            <Link to="/shop" className="btn btn-warning">
-                                Shop Now
+                            <Link to="/shop" className="btn btn-danger px-lg-5">
+                                Explore
                             </Link>
                         </div>
                     </div>
