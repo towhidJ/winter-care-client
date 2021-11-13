@@ -29,22 +29,36 @@ const About = () => {
                             rather than prospective experiences.
                         </p>
                         <p className="w-75 mx-auto fw-medium p-3">
-                            Quickly aggregate B2B users and worldwide
-                            potentialities. Progressively plagiarize
-                            resource-leveling e-commerce through
-                            resource-leveling core competencies. Dramatically
-                            mesh low-risk high-yield alignments before
-                            transparent e-tailers. Appropriately empower dynamic
-                            leadership skills after business portals. Globally
-                            myocardinate interactive supply chains with
-                            distinctive quality vectors. Globally revolutionize
-                            global sources through interoperable services.
-                            Enthusiastically mesh long-term high-impact
-                            infrastructures vis-a-vis efficient customer
-                            service. Professionally fashion wireless leadership
-                            rather than prospective experiences. Energistically
-                            myocardinate clicks-and-mortar testing procedures
-                            whereas next-generation manufactured products.
+                            Winter-care shop is the ultimate online shopping
+                            destination for Bangladesh offering completely
+                            hassle-free shopping experience through secure and
+                            trusted gateways. We offer you trendy and reliable
+                            shopping with all your favorite brands and more. Now
+                            shopping is easier, faster and always joyous. We
+                            help you make the right choice here. PriyoShop.com
+                            has been launched in February 2013. PriyoShop.com
+                            showcases products from all categories such as
+                            clothing, footwear, jewelry, accessories,
+                            electronics, appliance, health care, beauty
+                            products, and still counting! Our collection
+                            combines the latest in fashion trends as well as the
+                            all-time favorites. Our products are exclusively
+                            selected for you. We, at PriyoShop, have all that
+                            you need under one umbrella. In tune with the vision
+                            Digital Bangladesh, PriyoShop.com opens the doorway
+                            for everybody to shop over the Internet. We
+                            constantly update with lot of new products, services
+                            and special offers. We provide on-time delivery of
+                            products and quick resolution of any concerns. We
+                            provide our customers with memorable online shopping
+                            experience. Our dedicated PriyoShop quality
+                            assurance team works round the clock to personally
+                            make sure the right packages reach on time. You can
+                            choose whatever you like. We deliver it right at
+                            your address across Bangladesh. Our services are at
+                            your doorsteps all the time. Get the best products
+                            with the best online shopping experience every time.
+                            You will enjoy online shopping here!
                         </p>
                     </div>
                 </div>
