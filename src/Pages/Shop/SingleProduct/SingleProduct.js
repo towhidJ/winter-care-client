@@ -11,7 +11,7 @@ const SingleProduct = () => {
     return (
         <>
             <Navigation />
-            <div id="body" className="mt-5 pt-2">
+            <div id="body" className="mt-5 pt-2 overflow-hidden">
                 <div
                     className="card mb-3 "
                     style={{

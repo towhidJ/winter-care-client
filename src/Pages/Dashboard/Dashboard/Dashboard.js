@@ -194,6 +194,9 @@ function Dashboard(props) {
                     <PrivateRoute path={`${path}/review`}>
                         <Review></Review>
                     </PrivateRoute>
+                    <Route path={`${path}/*`}>
+                        <h1>Not Found</h1>
+                    </Route>
                 </Switch>
             </Box>
         </Box>

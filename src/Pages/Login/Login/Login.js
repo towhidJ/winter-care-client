@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import useAuth from "./../../../hooks/useAuth";
 import Footer from "./../../Shared/Footer/Footer";
@@ -101,6 +102,13 @@ const Login = () => {
                                         <i className="fab fa-google me-2"></i>{" "}
                                         Sign in with Google
                                     </button>
+                                </div>
+                                <div className="d-grid">
+                                    <p className="text-primary text-center">
+                                        <Link to="/register">
+                                            Create New Account
+                                        </Link>
+                                    </p>
                                 </div>
                             </div>
                         </div>

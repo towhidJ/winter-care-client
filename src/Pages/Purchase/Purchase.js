@@ -39,7 +39,7 @@ const Purchase = () => {
                 if (result.insertedId) {
                     alert("Order processed Successfully");
                     reset();
-                    history.push("/shop");
+                    history.push("/dashboard/orders");
                 }
             });
         console.log(data);
