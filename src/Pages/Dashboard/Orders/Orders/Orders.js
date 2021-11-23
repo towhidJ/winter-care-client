@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import { toast } from "react-toastify";
 import useAuth from "./../../../../hooks/useAuth";
 import "./Orders.css";
@@ -64,6 +65,7 @@ const Orders = () => {
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Payment</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -96,6 +98,18 @@ const Orders = () => {
                                         }
                                     >
                                         {order.status}
+                                    </td>
+                                    <td>
+                                        {order.payment ? (
+                                            "Paid"
+                                        ) : (
+                                            <Link
+                                                to={`/dashboard/payment/${order._id}`}
+                                                className=""
+                                            >
+                                                <button>Pay</button>
+                                            </Link>
+                                        )}
                                     </td>
                                     <td>
                                         <button

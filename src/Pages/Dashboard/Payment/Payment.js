@@ -1,8 +1,25 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import React from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import CheckoutForm from "./CheckoutForm";
 
+const stripePromise = loadStripe(
+    "pk_test_51Jvx26B3kyu6eQ9fCo4tt2T84XHZEqwcp8vXV8fe2xkrAM25rXbZ6ndTj2mBsWStM4ZlJwrStGbmtLj0elRziSoX00GeNMgCNV"
+);
 const Payment = () => {
+    const { id } = useParams();
+    const [order, setOrder] = useState({});
+    useEffect(() => {
+        fetch(`https://radiant-castle-55741.herokuapp.com/orders/${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setOrder(data);
+            });
+    }, [id]);
     return (
         <Box
             sx={{
@@ -16,7 +33,18 @@ const Payment = () => {
             }}
         >
             <Paper elevation={3} className="text-center align-content-center">
-                <h1>Payment System Coming Soon......</h1>
+                <div>
+                    <h2>
+                        Please Pay for: {order.customerName} for{" "}
+                        {order.productName}
+                    </h2>
+                    <h4>Pay: ${order.price}</h4>
+                    {order?.price && (
+                        <Elements stripe={stripePromise}>
+                            <CheckoutForm order={order} />
+                        </Elements>
+                    )}
+                </div>
             </Paper>
         </Box>
     );

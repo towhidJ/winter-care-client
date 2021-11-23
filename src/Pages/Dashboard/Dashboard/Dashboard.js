@@ -188,7 +188,7 @@ function Dashboard(props) {
                     <PrivateRoute path={`${path}/orders`}>
                         <Orders></Orders>
                     </PrivateRoute>
-                    <PrivateRoute path={`${path}/payment`}>
+                    <PrivateRoute path={`${path}/payment/:id`}>
                         <Payment></Payment>
                     </PrivateRoute>
                     <PrivateRoute path={`${path}/review`}>
