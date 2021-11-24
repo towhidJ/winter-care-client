@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigation from "../Shared/Navigation/Navigation";
 import Footer from "./../Shared/Footer/Footer";
-
+import "./Contact.css";
 const Contact = () => {
+    const initValue = {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+    };
+    const [contact, setContacts] = useState(initValue);
+
+    const handleOnBlur = (e) => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newContact = { ...contact };
+        newContact[field] = value;
+        setContacts(newContact);
+    };
+    const handleSubmit = (e) => {
+        console.log(contact);
+        e.preventDefault();
+    };
+
     return (
         <>
             <Navigation></Navigation>
@@ -64,12 +84,72 @@ const Contact = () => {
                                     ></i>
                                 </h1>
                                 <h1>Write Us</h1>
-                                <p>office@travelicious.com</p>
+                                <p>office@winter.com</p>
                                 <p>info@wintercare.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="container contact-form">
+                <div class="contact-image">
+                    <img
+                        src="https://image.ibb.co/kUagtU/rocket_contact.png"
+                        alt="rocket_contact"
+                    />
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <h3>Drop Us a Message</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-group my-2">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    class="form-control"
+                                    placeholder="Your Name *"
+                                    onBlur={handleOnBlur}
+                                />
+                            </div>
+                            <div class="form-group my-2">
+                                <input
+                                    type="text"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Your Email *"
+                                    onBlur={handleOnBlur}
+                                />
+                            </div>
+                            <div class="form-group my-2">
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    class="form-control"
+                                    placeholder="Your Phone Number *"
+                                    onBlur={handleOnBlur}
+                                />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group my-2">
+                                <textarea
+                                    name="message"
+                                    class="form-control"
+                                    placeholder="Your Message *"
+                                    style={{ height: "100%", width: "100%" }}
+                                    onBlur={handleOnBlur}
+                                ></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group my-2">
+                            <input
+                                type="submit"
+                                name="btnSubmit"
+                                class="btnContact"
+                            />
+                        </div>
+                    </div>
+                </form>
             </div>
             <Footer />
         </>
