@@ -20,6 +20,7 @@ const Contact = () => {
     };
     const handleSubmit = (e) => {
         console.log(contact);
+        e.target.reset();
         e.preventDefault();
     };
 

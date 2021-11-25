@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "./../../../../hooks/useAuth";
 import "./Orders.css";
@@ -28,7 +28,7 @@ const Orders = () => {
                 setSt(0);
                 setLoadOrder(false);
             });
-    }, [st]);
+    }, []);
 
     const deleteHandler = (id) => {
         if (window.confirm("Are you sure you want to cancel this order?")) {
