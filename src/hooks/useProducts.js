@@ -6,7 +6,7 @@ const useProducts = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://radiant-castle-55741.herokuapp.com/products")
+        fetch("http://localhost:5000/products")
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data.products);

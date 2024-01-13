@@ -27,7 +27,7 @@ const Purchase = () => {
         data.productName = productName;
         data.qty = 1;
         data.date = new Date().toLocaleDateString();
-        fetch("https://radiant-castle-55741.herokuapp.com/orders", {
+        fetch("http://localhost:5000/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

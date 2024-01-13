@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
     const [clientSecret, setClientSecret] = useState("");
 
     useEffect(() => {
-        fetch("https://radiant-castle-55741.herokuapp.com/create-payment-intent", {
+        fetch("http://localhost:5000/create-payment-intent", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -74,7 +74,7 @@ const CheckoutForm = ({ order }) => {
                 last4: paymentMethod.card.last4,
                 transaction: paymentIntent.client_secret.slice("_secret")[0],
             };
-            const url = `https://radiant-castle-55741.herokuapp.com/orders/${_id}`;
+            const url = `http://localhost:5000/orders/${_id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {

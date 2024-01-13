@@ -10,7 +10,7 @@ const DashboardHome = () => {
     const { admin } = useAuth();
     useEffect(() => {
         setLoading(true);
-        fetch("https://radiant-castle-55741.herokuapp.com/dashboard/")
+        fetch("http://localhost:5000/dashboard/")
             .then((res) => res.json())
             .then((result) => {
                 setDashboard(result);

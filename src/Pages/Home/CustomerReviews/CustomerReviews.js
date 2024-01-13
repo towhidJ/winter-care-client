@@ -14,7 +14,7 @@ const CustomerReviews = () => {
         slidesToScroll: 1,
     };
     useEffect(() => {
-        fetch("https://radiant-castle-55741.herokuapp.com/reviews")
+        fetch("http://localhost:5000/reviews")
             .then((res) => res.json())
             .then((result) => {
                 setReviews(result);

@@ -13,7 +13,7 @@ const Payment = () => {
     const { id } = useParams();
     const [order, setOrder] = useState({});
     useEffect(() => {
-        fetch(`https://radiant-castle-55741.herokuapp.com/orders/${id}`)
+        fetch(`http://localhost:5000/orders/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

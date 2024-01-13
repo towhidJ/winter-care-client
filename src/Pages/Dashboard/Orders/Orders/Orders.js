@@ -15,7 +15,7 @@ const Orders = () => {
     };
     useEffect(() => {
         setLoadOrder(true);
-        fetch("https://radiant-castle-55741.herokuapp.com/orders/byEmail", {
+        fetch("http://localhost:5000/orders/byEmail", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -35,7 +35,7 @@ const Orders = () => {
             // eslint-disable-next-line no-lone-blocks
             {
                 fetch(
-                    `https://radiant-castle-55741.herokuapp.com/orders/${id}`,
+                    `http://localhost:5000/orders/${id}`,
                     {
                         method: "Delete",
                         headers: { "Content-Type": "application/json" },

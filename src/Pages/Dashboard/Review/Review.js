@@ -20,7 +20,7 @@ const Review = () => {
     const { user } = useAuth();
     const onSubmit = (data) => {
         data.rating = rating;
-        fetch("https://radiant-castle-55741.herokuapp.com/reviews", {
+        fetch("http://localhost:5000/reviews", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
